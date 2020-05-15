@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}Get Buyer Info{% endblock %}
+
+{% block content %}
+<h2> Concert Selection </h2>
+		<p style="color:#2f3947;">See which singers' concerts need to be promoted!</p>
+<div class = "content">
+<form method="POST" action="/concertSelection" style="color:#2f3947;" enctype = "multipart/form-data">
+    Upload Concert Info
+      <input type = "file" class="btn btn-default btn-xs" name="file">
+      <input type = "submit" class="btn btn-success" value = "Upload"><br><br>
+</form>
+<form method="POST" action="/concertSelection" style="color:#2f3947;">
+Input number of singer you want to promote: 
+      <input type = "number" name = "num">
+      <input type = "submit" value = "Submit">
+</form>
+</div>
+<div class = "content">
+    			<h2>Singer Names:</h2>
+      				<table>
+     					{% for table in tables %}
+            					{{titles[loop.index]}}
+            					{{ table|safe }}
+					{% endfor %}
+    				</table>
+ 		</div>
+{% endblock %}

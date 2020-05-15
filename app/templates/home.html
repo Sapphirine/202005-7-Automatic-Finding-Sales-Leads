@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+	<h2 style="color:white;"font-family:verdana; "font-size:150%;"> Welcome! </h2>
+	<p style="color:#2f3947;"> This app presents a system that can automatically find potential sales leads for upcoming New York concerts.<br><br>
+You will be able to see, out of all the upcoming concerts, which singers' concerts are worth promoting, and the system can fetch the Tweeter user information for those who are potential buyers to the upcoming concert of a specific performer.</p> 
+
+<p style="color:#2f3947;"> 
+<strong>Concert Selection:</Strong><br><br> In this page, you can upload the concert information (a csv file with performer name and performer music genre) and input the number of singers whose concerts you want to promote. After you click the submit button, the system will display a table with the names of the singers' names and their corresponding Twitter sentiment score (-1 to 1, with -1 being completely negative and 1 being completely positive). The selection is made based on the popularity of the music genre, popularity of the singer, as well as the overall twitter sentiment of the singer.<br><br><br>
+
+<strong>Get Buyer Info:</Strong><br><br> This section gives you the information of Twitter users that are potentially interested in the singer's concerts. You can either input a specific singer or multiple singers (at most 5). After you input singer names, the system will return a table with Twitter user information corresponding to each singer. 
+</p>
+
+
+
+{% endblock %}
